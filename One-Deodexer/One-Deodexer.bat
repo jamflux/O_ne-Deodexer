@@ -335,12 +335,6 @@ if exist "!rom!\framework\!cpu!\*.oat" (
 	echo.
 	::Removing conflictive GApps
 	echo   -Removing conflictive GApps
-	if exist !rom!\app\GoogleCalendarSyncAdapter rmdir /q /s !rom!\app\GoogleCalendarSyncAdapter >nul
-	if exist !rom!\app\GoogleContactsSyncAdapter rmdir /q /s !rom!\app\GoogleContactsSyncAdapter >nul
-	if exist !rom!\app\GoogleExtShared rmdir /q /s !rom!\app\GoogleExtShared >nul
-	if exist !rom!\app\GooglePrintRecommendationService rmdir /q /s !rom!\app\GooglePrintRecommendationService >nul
-	if exist !rom!\app\GoogleTTS rmdir /q /s !rom!\app\GoogleTTS >nul
-	if exist !rom!\app\WebViewGoogle rmdir /q /s !rom!\app\WebViewGoogle >nul
 	if exist !rom!\app\BasicDreams rmdir /q /s !rom!\app\BasicDreams >nul
 	if exist !rom!\app\Chrome rmdir /q /s !rom!\app\Chrome >nul
 	if exist !rom!\app\Drive rmdir /q /s !rom!\app\Drive >nul
@@ -354,21 +348,6 @@ if exist "!rom!\framework\!cpu!\*.oat" (
 	if exist !rom!\app\PhotoTable rmdir /q /s !rom!\app\PhotoTable >nul
 	if exist !rom!\app\Videos rmdir /q /s !rom!\app\Videos >nul
 	if exist !rom!\app\YouTube rmdir /q /s !rom!\app\YouTube >nul
-	if exist !rom!\framework\com.google.android.maps.jar del !rom!\framework\com.google.android.maps.jar >nul
-	if exist !rom!\framework\com.google.android.media.effects del /q /s !rom!\framework\com.google.android.media.effects >nul
-	if exist !rom!\priv-app\ConfigUpdater rmdir /q /s !rom!\priv-app\ConfigUpdater >nul
-	if exist !rom!\priv-app\GmsCore rmdir /q /s !rom!\priv-app\GmsCore >nul
-	if exist !rom!\priv-app\GoogleBackupTransport rmdir /q /s !rom!\priv-app\GoogleBackupTransport >nul
-	if exist !rom!\priv-app\GoogleExtServices rmdir /q /s !rom!\priv-app\GoogleExtServices >nul
-	if exist !rom!\priv-app\GoogleFeedback rmdir /q /s !rom!\priv-app\GoogleFeedback >nul
-	if exist !rom!\priv-app\GoogleLoginService rmdir /q /s !rom!\priv-app\GoogleLoginService >nul
-	if exist !rom!\priv-app\GoogleOneTimeInitializer rmdir /q /s !rom!\priv-app\GoogleOneTimeInitializer >nul
-	if exist !rom!\priv-app\GooglePackageInstaller rmdir /q /s !rom!\priv-app\GooglePackageInstaller >nul
-	if exist !rom!\priv-app\GooglePartnerSetup rmdir /q /s !rom!\priv-app\GooglePartnerSetup >nul
-	if exist !rom!\priv-app\GoogleServicesFramework rmdir /q /s !rom!\priv-app\GoogleServicesFramework >nul
-	if exist !rom!\priv-app\Phonesky rmdir /q /s !rom!\priv-app\Phonesky >nul
-	if exist !rom!\priv-app\Velvet rmdir /q /s !rom!\priv-app\Velvet >nul
-	if exist !rom!\priv-app\PrebuiltGmsCore rmdir /q /s !rom!\priv-app\PrebuiltGmsCore >nul
 	echo   -Deoptimizing OAT files from
 	%cecho%    {06}[!rom!\framework\!cpu!]{#}
 	echo.
@@ -827,6 +806,7 @@ echo.
 echo   -Done.
 set ENDTIME=%TIME%
 call :time
+echo   -Elapsed time: %DURATION%
 pause>nul
 goto menu
 
