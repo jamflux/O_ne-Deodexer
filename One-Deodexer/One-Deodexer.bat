@@ -1,6 +1,6 @@
 @echo OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
-set APP_DESCRIPTION=Deodexer Tool for android 5-8
+set APP_DESCRIPTION=Deodexer Tool for android 6-8
 set CYGWIN=nodosfilewarning
 set CECHO=bin\cecho.exe
 set busybox=bin\busybox.exe
@@ -52,6 +52,43 @@ echo     MM    ,dP' YM.    , YA.   ,A9 `Mb    MM YM.    ,  ,V' VA. YM.    ,  MM
 echo   .JMMmmmdP'    `Mbmmd'  `Ybmd9'   `Wbmd"MML.`Mbmmd'.AM.   .MA.`Mbmmd'.JMML.   
 %cecho%                                                                   {06}by JamFlux{#}
 TIMEOUT /T 2 /nobreak > NUL & CLS
+if not exist system\build.prop (
+mode con:cols=40 lines=35
+cls
+echo.
+echo.
+echo.
+%cecho%     {06}.g8""8q.   `7MN.   `7MF'{#}
+echo.
+%cecho%   {06}.dP'    `YM.   MMN.    M{#}
+echo.
+%cecho%   {06}dM'      `MM   M YMb   M  .gP"Ya{#}
+echo.
+%cecho%   {06}MM        MM   M  `MN. M ,M'   Yb{#}
+echo.
+%cecho%   {06}MM.      ,MP   M   `MM.M 8M""""""{#}
+echo.
+%cecho%   {06}`Mb.    ,dP'   M     YMM YM.    ,{#}
+echo.
+%cecho%     {06}`"bmmd"'   .JML.    YM  `Mbmmd'{#}
+echo.
+%cecho%            {06}deodexer{#}
+echo.
+%cecho%                          {03}by JamFlux{#}
+echo.
+echo.
+echo.
+echo.
+echo.
+echo   -Can't continue.
+echo.
+%cecho%    No {06}build.prop{#} has been found.
+echo.
+echo.
+pause>nul
+exit
+)
+
 
 :menu
 mode con:cols=40 lines=35
@@ -239,7 +276,7 @@ echo.
 %cecho%                          {03}by JamFlux{#}
 echo.
 echo.
-if !api! geq 24 (
+if !api! geq 23 (
 goto deodex_nougat
 ) else (
 echo.
@@ -868,38 +905,4 @@ echo.
 echo    Can't zip.
 pause>nul
 goto menu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
