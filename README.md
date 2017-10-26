@@ -1,5 +1,5 @@
 # O_ne-Deodexer
-Deodexer for android 7+
+Deodexer for android 6, 7 and 8.
 
 Easy to use deodexer wrote in batch script for Windows.
 Excelent for Miui ROMs.
